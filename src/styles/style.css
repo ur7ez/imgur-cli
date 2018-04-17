@@ -1,0 +1,31 @@
+.scroll-top-text {
+    padding: 15px 5px 15px 0;
+    right: 5px;
+    position: absolute;
+    margin-top: -25px;
+}
+
+.page-divider {
+    height: 1px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: -25px;
+}
+
+.nodisplay {
+    display: none !important;
+}
+
+.auth {
+    text-align: center;
+    padding: 40px;
+}
+
+.auth.success {
+    color: chartreuse;
+}
+
+.auth.failure {
+    color: darkred;
+}

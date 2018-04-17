@@ -1,0 +1,175 @@
+.green {
+    color: #1BB76E !important;
+}
+
+::selection {
+    background: #1bb76e;
+}
+
+::-moz-selection {
+    background: #1bb76e
+}
+
+.margin-bottom {
+    margin-bottom: 10px;
+}
+
+.bold, .current-selected {
+    font-weight: 700;
+}
+
+.error, .error strong, .new, .red {
+    color: #DB3535 !important;
+}
+
+.home-gallery, .home-gallery * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.home-gallery:before, .home-gallery:after, .home-gallery *:before, .home-gallery *:after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+a strong, a:active, a:visited {
+    color: #7789ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a, a:hover {
+    color: #7789ff;
+}
+
+.active {
+    color: green; font-weight: bold;
+}
+
+.transition {
+    transition: all .07s ease-in-out;
+    -webkit-transition: all .07s ease-in-out;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.clear {
+    height: 0;
+    clear: both;
+}
+
+[class*=" icon-"]:before, [class^=icon-]:before, [data-icon]:before {
+    font-family: imgur !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-upvote-outline:before {
+    content: "\e000"
+}
+
+.icon-downvote-outline:before {
+    content: "\76";
+}
+
+.icon-upvote-fill:before {
+    content: "\e001";
+}
+
+.icon-downvote-fill:before {
+    content: "\75";
+}
+
+@font-face {
+    font-family: imgur;
+    src: url(includes/fonts/imgur.eot?6);
+    src: url(includes/fonts/imgur.eot?6#iefix) format("embedded-opentype"), url(includes/fonts/imgur.woff?6) format("woff"), url(includes/fonts/imgur.ttf?6) format("truetype"), url(includes/fonts/imgur.svg?6#imgur) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+body, html {
+    background-color: #141518
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #f2f2f2;
+    height: 100%;
+    margin: 0;
+    font-size: 14px
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*font: inherit;*/
+    vertical-align: baseline;
+}
+
+input[type=search] {
+    font-family: inherit;
+    border: 1px solid transparent;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+    background-color: #191919;
+    outline: 0;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: .9em;
+    line-height: 1.5em;
+    resize: none;
+    color: #f2f2f2;
+    margin-bottom: 10px;
+    letter-spacing: .02em;
+}
+
+input[type=search]:focus {
+    color: #f2f2f2;
+    border: 1px solid #1bb76e
+}
+
+input[type=text], input[type=password], input[type=email], textarea {
+    font-family: inherit;
+    border: 1px solid transparent;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+    background-color: #191919;
+    outline: 0;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: .9em;
+    line-height: 1.5em;
+    resize: none;
+    color: #f2f2f2;
+    margin-bottom: 10px;
+    letter-spacing: .02em;
+}
+
+input.placeholder, textarea.placeholder {
+    color: grey;
+}
+
+input[type=text], input[type=password] {
+    height: 32px;
+}
+
+.clear {
+    height: 0;
+}
+
+.br5 {
+    border-radius: 5px;
+}

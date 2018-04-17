@@ -1,0 +1,853 @@
+#search-gallery {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.relative {
+    position: relative;
+}
+
+.main #imagelist {
+    width: 800px;
+    right: auto;
+    left: 0;
+    position: relative;
+    z-index: 2;
+    transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+}
+
+.main #imagelist, #imagelist.home-gallery, .outside #imagelist {
+    width: 100%;
+    display: inline-block;
+}
+
+.outside {
+    margin-bottom: 20px !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    max-width: 1170px !important;
+}
+
+#content.outside {
+    position: relative;
+}
+
+#content {
+    width: 1170px;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 10px auto 0;
+    min-height: 150px;
+    z-index: 0;
+    clear: both;
+}
+
+.posts {
+    padding: 21px;
+    line-height: 0;
+    position: relative;
+    background-color: #2C2F34;
+    box-shadow: 0 0 11px 1px #111;
+    -webkit-box-shadow: 0 0 11px 1px #111;
+    -moz-box-shadow: 0 0 11px 1px #111;
+    margin-bottom: 50px;
+}
+
+.post:hover .gradient-black-transparent {
+    background: 0 0;
+    background: linear-gradient(to bottom, #000, transparent);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
+    position: absolute;
+    top: 0;
+    height: 70px;
+    width: 100%
+}
+
+.post:hover .gradient-transparent-black {
+    background: 0 0;
+    background: linear-gradient(to bottom, transparent, #000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0)
+}
+
+.post .hover, .post a.image-list-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.post {
+    background-color: #181817;
+    display: inline-block;
+    margin: 4px 2px;
+    position: relative;
+}
+
+.post, .post img {
+    width: 180px;
+    height: 180px;
+    line-height: 0;
+}
+
+.post a.image-list-link {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.post a:hover + .hover, .post:hover .rank {
+    display: block;
+}
+
+.post .hover {
+    display: none;
+    padding: 7%;
+    width: 120%;
+    z-index: 2;
+    background-color: #121211;
+    top: 101%;
+    margin-left: -19%;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -webkit-box-shadow: 0 2px 5px #000;
+    -moz-box-shadow: 0 2px 5px #000;
+    box-shadow: 0 2px 5px #000;
+    text-align: left;
+}
+
+.post:hover {
+    border-color: #6C6C6C;
+}
+
+.post, .post .hover {
+    border: 2px solid #444442;
+}
+
+.post.green {
+    border: 2px solid #1BB76E;
+}
+
+.post.red {
+    border: 2px solid #DB3535;
+}
+
+.post a:visited img {
+    border-color: #181817;
+}
+
+.post img {
+    outline: #121211 solid 1px;
+    outline-offset: -1px;
+}
+
+.post .point-info {
+    background: #000;
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    color: #FFF;
+    bottom: -70px;
+}
+
+.post .point-info > div {
+    height: 70px;
+}
+
+.post .point-info, .post .post-info {
+    width: 100%;
+}
+
+.post .point-info > div {
+    height: 70px;
+}
+
+.post:hover .point-info {
+    bottom: 0;
+}
+
+.post .post-info {
+    background-color: #232323;
+    padding: 7%;
+    position: absolute;
+    width: 87.5%;
+    bottom: 0;
+    left: 0;
+    color: #999;
+    border-top: 1px solid #000;
+}
+
+.post p {
+    line-height: 1.5em;
+    color: #fff;
+    max-height: 11em;
+    padding: 0;
+    letter-spacing: .03em;
+    margin-bottom: 27px;
+}
+
+.post p {
+    overflow: hidden;
+}
+
+.post .pa-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+}
+
+.post .arrows {
+    width: 60px;
+    margin-bottom: 1px;
+}
+
+.post .point-info .point-info-points {
+    color: #fff;
+    color: rgba(255, 255, 255, .8);
+    line-height: 31px;
+    float: right;
+}
+
+.post .point-info .arrows, .post .point-info .point-info-points {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.post .arrows .arrow-down, .post .arrows .arrow-up {
+    padding: 7px;
+    float: left;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.post.green .image-list-link:before, .post.red .image-list-link:before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: -2px;
+    top: -2px;
+    border-left: 40px solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 40px solid transparent;
+}
+
+.post.green .image-list-link:before {
+    border-top-color: #1BB76E;
+}
+
+.post.red .image-list-link:before {
+    border-top-color: #DB3535;
+}
+
+/*  filter gallery combobox container   */
+.sentence-sorting {
+    width: 100%;
+    font-size: 22px;
+    padding: 10px 0 10px 0;
+    color: #fff;
+    line-height: 33px;
+    position: relative;
+    text-align: center;
+    border: 1px solid cadetblue;
+    border-radius: 0.3em;
+    margin: 0 15px 7px 0;
+}
+
+.sentence-sorting .update-gallery {
+    padding: 18px 0 0 0;
+    display: inline-flex;
+    position: absolute;
+    left: 10px;
+}
+
+.sentence-sorting #section, .sentence-sorting #sort, .sentence-sorting #window {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0 4px 1px 3px;
+    text-align: left;
+}
+
+.sorting-text-align {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.combobox, .like-combobox-but-not {
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+}
+
+.combobox ul, .like-combobox-but-not ul {
+    margin: 0;
+    list-style: none;
+}
+
+#sort.combobox ul, #window.combobox ul {
+    overflow-y: auto;
+}
+
+.combobox .item, .like-combobox-but-not .item {
+    padding: 10px 20px;
+}
+
+.combobox .selection, .like-combobox-but-not .selection {
+    background-color: #232323;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.combobox .selection, .combobox-header, .like-combobox-but-not .selection, .like-combobox-but-not-header {
+    padding: 10px;
+    color: #606060;
+}
+
+.sentence-sorting .selection {
+    line-height: 33px;
+    margin: 0;
+    font-size: 22px;
+    position: relative;
+    padding: 0 5px 0 0;
+    overflow: visible;
+    border-bottom: 3px solid #1bb76e;
+    border-radius: 0;
+    background-color: transparent;
+    border-top: 0;
+    color: #fff;
+}
+
+.sentence-sorting #section .options .item, .sentence-sorting #sort .item, .sentence-sorting #window .item {
+    position: relative;
+    border-top: 0 none;
+    text-align: left;
+    line-height: 20px;
+    padding: 0;
+}
+
+#section .options .item div[data-type=user] .name, #section .options .item.user-group-item .name, #sort .options .item, #window .options .item {
+    border-top: 0 none;
+    border-bottom: 0 none;
+}
+
+.sentence-sorting .selection:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    background: 0 0;
+    bottom: 0;
+    top: auto;
+    z-index: 11;
+    right: 0;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid #1bb76e;
+}
+
+#section .option .item:hover .name, #section .selection .name, #section:hover .selection .name {
+    max-width: 315px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.combobox .item:hover, .like-combobox-but-not .item:hover {
+    color: #1a1a1a;
+    background-color: #e8e7e6;
+}
+
+#section.combobox .options {
+    overflow: hidden;
+}
+
+#section.combobox .item:first-child {
+    border-top: none;
+}
+
+.sentence-sorting .front-page-section.combobox .options {
+    width: 260px;
+}
+
+.sentence-sorting .item.bold {
+    font-size: 18px;
+}
+
+.sentence-sorting .options .name, .sentence-sorting .options a {
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.sentence-sorting .combobox .options {
+    overflow: hidden;
+    width: 200px;
+    margin-top: -25px;
+    margin-left: -15px;
+}
+
+.combobox.opened .options, .like-combobox-but-not.opened .options {
+    opacity: 1;
+    display: block;
+    z-index: 999;
+    top: 0;
+}
+
+.combobox .options, .like-combobox-but-not .options {
+    margin: 0;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    color: #4d4d4d;
+    z-index: 1;
+    overflow: hidden;
+    left: 0;
+    top: -99999em;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-transition: height .1s ease-in, opacity .1s ease-in;
+    transition: height .1s ease-in, opacity .1s ease-in;
+}
+
+.combobox .options {
+    text-shadow: none;
+}
+
+.combobox.opened .nano {
+    height: 150px;
+}
+
+#sort.combobox.opened .sorting-text-align {
+    height: 142px;
+}
+
+#window.combobox.opened .sorting-text-align {
+    height: 222px;
+}
+
+.nano {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.nano .content:focus, .nano .scroll-content:focus {
+    outline: 0;
+}
+
+.combobox-header-current {
+    font-size: 11px;
+    letter-spacing: .03em;
+    padding: 5px 20px 10px;
+    color: grey;
+    border-bottom: 1px solid #ccc;
+}
+
+.combobox.opened, .combobox:hover .selection {
+    background-color: #50545C;
+}
+
+.sentence-sorting .combobox-current {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin-top: -7px;
+}
+
+.sentence-sorting .combobox:hover .selection, .sentence-sorting .opened .selection {
+    color: #1bb76e;
+    background: 0 0;
+}
+
+.sentence-sorting .sort-options {
+    max-width: 445px;
+    font-weight: 400;
+    float: right;
+    padding: 0;
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+
+.sort-options {
+    margin-right: 20px;
+}
+
+#edit-sentence .edit-sort-options ul, .sentence-sorting .sort-options ul {
+    margin: 0;
+    display: inline-block;
+    list-style: disc;
+    -webkit-padding-start: 0;
+}
+
+#search_header_ul {
+    margin-right: 0;
+}
+
+#edit-sentence .edit-sort-options ul li, .sentence-sorting .sort-options ul li {
+    list-style: none;
+    display: inline-block;
+    color: #888;
+    opacity: .5;
+    cursor: pointer;
+    float: right;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+#edit-sentence .edit-sort-options a, .sentence-sorting .sort-options a {
+    text-decoration: none;
+    position: relative;
+    font-size: 1em;
+}
+
+.sentence-sorting .sort-options a {
+    font-size: 16px;
+    padding: 11px;
+    color: #999;
+    float: left;
+    text-decoration: none;
+}
+
+#edit-sentence .edit-sort-options li a, .sentence-sorting .sort-options li a {
+    padding: 0;
+}
+
+#cancelEdit span, #confirmEdit span, #deleteGallery span, #editGallery span, .sentence-sorting .sort-options #past-link span, .sentence-sorting .sort-options #random-button span {
+    background: url(../includes/img/site-sprite.png?1430420391) -345px -217px no-repeat;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    image-rendering: optimizeQuality;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.sentence-sorting .sort-options #random-button span {
+    background-position: -382px -216px;
+}
+
+h1#user-gallery-message {
+    font-weight: 400;
+    text-shadow: none;
+}
+
+#user-gallery-message {
+    font-size: 14px;
+    width: 55%;
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px;
+    color: grey;
+    position: relative;
+}
+
+.sentence-sorting .sort-options a.selected, .sentence-sorting .sort-options a:hover {
+    color: #fff;
+}
+
+.sentence-sorting .sort-options .toggle-options, .sentence-sorting .sort-options a#saveGallery {
+    font-size: 16px;
+}
+
+#edit-sentence .edit-sort-options ul li:hover, #search_header_ul li.active, .sentence-sorting .sort-options .toggle-options li, .sentence-sorting .sort-options li:hover {
+    opacity: 1;
+}
+
+#search_adv_toggle, .sentence-sorting .sort-options a#showfiltered, .sentence-sorting .sort-options a#showusersub, .sentence-sorting .sort-options a#showviral {
+    padding-left: 20px;
+    margin-top: -3px;
+}
+
+#search_adv_toggle:before, .sentence-sorting .sort-options a#showfiltered span:before, .sentence-sorting .sort-options a#showusersub span:before, .sentence-sorting .sort-options a#showviral span:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    margin-top: -5px;
+    background: #ccc;
+    border-radius: 60px;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+}
+
+#search_adv_toggle {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.sentence-sorting .sort-options a#showfiltered.showing span:before, .sentence-sorting .sort-options a#showusersub.showing span:before, .sentence-sorting .sort-options a#showviral.showing span:before, li.active #search_adv_toggle:before {
+    background: #1bb76e;
+}
+
+.sentence-sorting .end-text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.gallery-filter {
+    margin: 0 0.6em 0 1.4em;
+}
+
+.gallery-filter p {
+    text-align: center;
+    margin: 0;
+}
+
+/*  global search styles  */
+
+.sentence-sorting.search-sentence {
+    height: auto;
+}
+
+.sentence-sorting.search-sentence .sort-options {
+    position: relative;
+    float: none;
+    margin: -10px auto;
+}
+
+.search-sentence.sentence-sorting {
+    max-height: none;
+    font-size: 22px;
+}
+
+#edit-sentence, .sentence-sorting {
+    width: 100%;
+    font-size: 22px;
+    padding: 10px 0 10px;
+    color: #fff;
+    line-height: 33px;
+    position: relative;
+    text-align: center;
+}
+
+.search-sentence .search-term-text {
+    font-style: italic;
+    font-weight: 700;
+    max-width: 300px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 7px;
+    padding-right: 5px;
+}
+
+#search-as-thumbs-icon {
+    width: 22px;
+    margin-top: 2px;
+}
+
+#search-as-list-icon, #search-as-thumbs-icon {
+    display: inline-block;
+    margin: 0;
+    height: 20px;
+    overflow: hidden;
+    padding: 0;
+    background-color: transparent;
+}
+
+#search-as-list-icon {
+    width: 40px;
+    margin-top: 2px;
+}
+
+#search-as-thumbs-icon span.small-square {
+    display: block;
+    float: left;
+    height: 4px;
+    width: 4px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    background-color: #fff;
+}
+
+#search-as-list-icon span.square {
+    height: 13px;
+    width: 14px;
+    display: inline-block;
+    background-color: transparent;
+    outline: #fff solid 2px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+#search-as-list-icon span.stripes {
+    display: inline-block;
+    width: 13px;
+    margin-left: 15px;
+}
+
+#search-as-list-icon span.stripe {
+    width: 15px;
+    display: block;
+    background-color: #fff;
+    height: 2px;
+    margin-bottom: 3px;
+}
+
+#search_adv_toggle:before {
+    left: -15px;
+    margin-top: -6px;
+}
+
+#search_advanced {
+    clear: both;
+    position: relative;
+    padding: 15px 0;
+    background-color: #2C2F34;
+    margin-bottom: 15px;
+    box-shadow: 0 0 11px 1px #111;
+    -webkit-box-shadow: 0 0 11px 1px #111;
+    -moz-box-shadow: 0 0 11px 1px #111;
+}
+
+#search_advanced_left {
+    width: 50%;
+    float: left;
+}
+
+#search_advanced_right {
+    width: 49%;
+    float: right;
+}
+
+#search_advanced .search-option-row {
+    position: relative;
+    height: 44px;
+}
+
+#search_advanced #search_advanced_left .search-label, #search_advanced #search_advanced_right .search-label {
+    vertical-align: top;
+    width: 65px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 5px;
+    line-height: 30px;
+}
+
+#search_advanced #search_advanced_right .search-label {
+    width: 90px;
+    display: inline-block;
+    text-align: right;
+}
+
+#search_advanced #search_advanced_left .search-input, #search_advanced #search_advanced_right .search-input {
+    display: inline-block;
+}
+
+#search_advanced #search_advanced_left .search-input input {
+    font-size: 12px;
+    width: 370px;
+}
+
+#search_advanced #search_advanced_right .search-input .combobox {
+    width: 351px;
+    margin-bottom: 10px;
+}
+
+#search_advanced #search_advanced_right .search-input input {
+    font-size: 12px;
+    width: 351px;
+}
+
+.combobox .triangle, .like-combobox-but-not .triangle {
+    width: 13px;
+    height: 7px;
+    position: absolute;
+    top: 42%;
+    right: 7px;
+    margin-top: -2px;
+    font-size: 10px;
+}
+
+.combobox .item.selected, .like-combobox-but-not .item.selected {
+    background-color: #d8d8d8;
+}
+
+#search_advanced .search-option-row .toggle {
+    float: right;
+    height: 22px;
+    margin: 11px 41px 0 0;
+}
+
+#search_advanced .search-option-row .toggle input {
+    display: none;
+}
+
+#search_advanced .search-option-row .toggle label {
+    position: relative;
+    display: inline-block;
+    background-color: #181817;
+    width: 26px;
+    height: 14px;
+    border-radius: 20px;
+}
+
+#search_advanced .search-option-row .toggle .text-off, #search_advanced .search-option-row .toggle .text-on {
+    display: none;
+    position: absolute;
+    left: -325px;
+    top: 30px;
+    color: #1bb76e;
+    font-size: 10px;
+    line-height: 11px;
+}
+
+.circle {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#search_advanced .search-option-row .toggle input + label .circle {
+    background-color: #444442;
+    left: auto;
+    right: 2px;
+    width: 10px;
+    top: 2px;
+    height: 10px;
+}
+
+#search_advanced #search_advanced_right .search-input #q_size_mpx.combobox, #search_advanced #search_advanced_right .search-input #q_size_px.combobox {
+    width: 320px;
+}
+
+.search-option-submit {
+    text-align: right;
+}
+
+.search-option-submit input[type=submit] {
+    margin-top: -2px;
+    margin-right: 27px;
+}

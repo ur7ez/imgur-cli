@@ -1,0 +1,409 @@
+@media (min-width: 768px) {
+    .bd-navbar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1071;
+    }
+}
+
+.bd-navbar {
+    min-height: 50px;
+    background-color: #563d7c;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
+}
+
+.bd-navbar .navbar-nav-svg {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: text-top;
+}
+
+.btn-bd-download {
+    font-weight: 500;
+    color: #ffe484;
+    border-color: #ffe484 !important;
+}
+
+a.topbar-icon {
+    cursor: pointer;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+a.topbar-icon:hover {
+    background: #50545c;
+}
+
+.logo {
+    display: block;
+    float: left;
+    padding: 1px 11px 1px 13px;
+    margin-top: 7px;
+    border-radius: 20px;
+    margin-left: -10px;
+}
+
+.logo-icon {
+    float: left;
+    background: url(https://s.imgur.com/images/imgur-logo.svg?1) center center no-repeat;
+    width: 83px;
+    height: 34px;
+    background-size: contain;
+}
+
+.bd-navbar .dropdown-item.active {
+    font-weight: 500;
+    color: #212529;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23292b2c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: .4rem .6rem;
+    background-size: .75rem .75rem;
+}
+
+#topbar .user-dropdown li {
+    display: block;
+    float: none;
+}
+
+#topbar #notification-dropdown a:hover, #topbar .link-menu a:hover, #topbar .other-accounts ul li a:hover, #topbar .user-dropdown a.active:hover, #topbar .user-dropdown a:hover {
+    color: #121211;
+    background-color: #ccc;
+}
+
+#topbar .account .user-dropdown-container, #topbar .signin-dropdown {
+    width: 160px;
+    right: 0;
+    background-color: #efefef;
+    color: #121211;
+    top: -1000px;
+    border-top: 3px solid #1bb76e;
+    transition: all 0s .3s;
+}
+
+#topbar .account .user-dropdown-container, #topbar .link-menu, #topbar .signin-dropdown {
+    position: absolute;
+    z-index: 1000;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .35);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.dropdown-footer {
+    font-size: 12px;
+    background-color: #ddd;
+    text-align: center;
+    padding: 4px;
+}
+
+#topbar .dropdown-footer a, #topbar .dropdown-footer a.active, #topbar .dropdown-footer button {
+    font-size: 12px;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    color: #585858;
+    padding: 0;
+    margin-right: 8px;
+    background: 0 0;
+    cursor: pointer;
+}
+
+.user-nav {
+    color: greenyellow !important;
+    font-style: oblique;
+}
+
+/* global search styles */
+
+#topbar .search {
+    background-color: transparent;
+    font-size: .9em;
+    width: 370px;
+    height: 44px;
+    display: none;
+    border: 0;
+    margin-bottom: 0;
+    outline: none;
+}
+
+#global-search-container {
+    float: left;
+    user-select: none;
+    padding: 0;
+    position: relative;
+    margin-right: 5px;
+}
+
+#topbar .search-container {
+    height: 44px;
+    width: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#topbar .search-closed {
+    width: 48px;
+    overflow: hidden;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    margin-right: -5px;
+}
+
+#topbar .search-closed .search {
+    display: inline-block;
+    color: #ccc;
+}
+
+#topbar .search-container.search-closed:hover {
+    box-sizing: border-box;
+    border: 5px solid #34373C;border-top-color: white;
+    border-radius: 50%;
+}
+
+#topbar .search-container:hover {
+    background-color: #50545c;
+}
+
+#topbar .search-focused, #topbar .search-focused:hover {
+    width: 420px;
+    background-color: #50545c;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none
+}
+
+#topbar .search-focused .search {
+    display: inline-block;
+    color: #ccc;
+}
+
+#topbar.transparent .search-focused, #topbar.transparent .search-focused:hover {
+    width: 463px;
+    background-color: rgba(255, 255, 255, .06);
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none
+}
+
+#topbar .search-form input[type=search]:focus {
+    transition: border .1s ease-in;
+    -moz-transition: border .1s ease-in;
+    -webkit-transition: border .1s ease-in;
+    cursor: text;
+    color: #fff;
+    box-shadow: 0 0 0 0 transparent
+}
+
+#topbar .search-icon-container {
+    height: 44px;
+    width: 48px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    top: 0;
+}
+
+#topbar .icon-search {
+    padding: 5px 2px;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    font-size: 18px;
+    line-height: 15px;
+}
+
+.icon-search:before {
+    content: "\52";
+}
+
+#topbar .search-closed:hover .icon-search {
+    top: 1px;
+    right: 7px;
+}
+
+#topbar .global-search-autocomplete {
+    border-top: 3px solid #1bb76e;
+    display: none;
+    margin-top: 0;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 0 11px 1px #111;
+    z-index: 1
+}
+
+#topbar .search-container.search-focused .global-search-autocomplete {
+    display: block
+}
+
+#topbar .global-search-footer, #topbar .global-search-section {
+    border-right: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+    border-left: 1px solid #1a1a1a
+}
+
+#topbar .global-search-footer {
+    background-color: #50545c;
+    max-width: 100%;
+    height: 54px
+}
+
+#topbar .global-search-footer > div {
+    padding: 10px !important;
+    overflow: hidden
+}
+
+#topbar .global-search-footer div .footer-label {
+    width: 50px;
+    text-transform: uppercase;
+    font-size: 9px !important;
+    color: #fff !important;
+    line-height: 14px;
+    padding: 4px 2px !important;
+    border-right: 1px solid #fff;
+    float: left
+}
+
+#topbar .global-search-footer .footer-content {
+    float: left;
+    width: 85%
+}
+
+#topbar .global-search-footer .footer-content .keyword, #topbar .global-search-footer .footer-content .keyword-desc {
+    float: left;
+    text-align: right;
+    width: 50px
+}
+
+#topbar .global-search-footer .footer-content .keyword-desc {
+    width: 104px;
+    text-align: left;
+    color: #fff !important;
+    padding-left: 10px !important
+}
+
+#topbar .global-search-footer div, #topbar .global-search-footer span, #topbar .global-search-section a, #topbar .global-search-section span {
+    padding: 0;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 2px
+}
+
+#content, #topbar .global-search-footer .footer-content .keyword.nextline, .cf:after, .clear {
+    clear: both
+}
+
+/* NewPost component styles */
+
+#topbar .upload-button-container {
+    position: relative;
+    float: left;
+    display: inline-block;
+    margin: 0 0 0 15px;
+    border-radius: 3px;
+    border: 1px solid #1bb76e;
+    background: #1bb76e;
+    line-height: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+#topbar .upload-button-container .options {
+    line-height: 150%;
+    width: auto;
+    overflow: hidden;
+    height: 0;
+    position: absolute;
+    top: 40px;
+    left: -5px;
+}
+
+#topbar .upload-button-container ul {
+    position: relative;
+    left: 1px;
+    background: #e5e5e5;
+    color: #333;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .35);
+    margin: 0;
+    padding: 0;
+    -webkit-padding-start: 0;
+    vertical-align: baseline;
+}
+
+#topbar .upload-button-container ul li {
+    font-size: 14px;
+    display: block;
+    position: static;
+}
+
+#topbar .upload-button-container ul li a:hover {
+    background-color: #ccc;
+}
+
+#topbar .upload-button-container .options.create-dropdown-opened {
+    overflow: visible;
+    height: 200px;
+    z-index: 4;
+}
+
+#topbar .upload-button-container ul li a {
+    width: 100%;
+    padding: 10px 18px;
+    position: static;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+#topbar .upload-button-container .upload-button {
+    display: inline-block;
+    padding: 5px 0 2px 12px;
+    line-height: 150%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #f2f2f2;
+    width: 129px;
+}
+
+#topbar .upload-button-container .icon-upload {
+    vertical-align: sub;
+    font-size: 19px;
+}
+
+.icon-upload:before {
+    content: "\3e";
+}
+
+.icon-arrow-down:before {
+    content: "\63";
+}
+
+#topbar .upload-button-container .upload-btn-text {
+    margin: 0 2px 0 7px;
+    font-weight: 600;
+}
+
+#topbar .upload-button-container #create-dropdown-button {
+    font-size: 8px;
+    padding: 13px 13px 9px 12px;
+}
+
+#topbar .upload-button-container .icon-arrow-down {
+    float: none;
+    padding-right: 12px;
+}
+
+#topbar .icon-arrow-down {
+    float: left;
+    font-size: 10px;
+    margin: 10px 0 0 -6px;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    padding: 9px 0 0 9px;
+}
